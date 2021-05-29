@@ -10,17 +10,19 @@ body{
     box-sizing: border-box;
 }
 
-nav{
-    /* background: linear-gradient(rgb(85, 86, 87), rgb(18, 22, 22)); */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
     background: inherit;
+}
+
+nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 5px 3%;
-    position: sticky;
-    top: 0;
-    z-index: 1;
 }
 
 
@@ -151,17 +153,19 @@ nav li{
 }
 
 #nav-sm{
-    background:inherit;
-    position: fixed;
+    background: linear-gradient(#012926 , #08645e, #0e7e76);
+    position: absolute;
     left: -100%;
-    top: 9%;
+    top: 100%;
     z-index: 1;
-    height: 100%;
+    min-height: 100vh;
     width: 50%;
+    min-width: max-content;
     padding: 0 10px;
     font-weight: bold;
     transition: .7s ease all;
     opacity: .93;
+    color: blanchedalmond;
 }
 
 #nav-sm ul, .news ul, .child ul{
@@ -373,7 +377,7 @@ nav li{
 
 
 footer{
-    background: linear-gradient(#8dc0bd , #7ab4b0, #4e8a86);
+    background: linear-gradient(#012926 , #08645e, #0e7e76);
     margin-top: 3%;
     display: flex;
     justify-content: space-around;
@@ -451,9 +455,6 @@ footer li:hover, nav li:hover, #nav-sm li:hover{
         position: unset;
         
     }
-    #nav-sm{
-        top: 7%;
-    }
 
     .quiz{
         width: 90%;
@@ -462,7 +463,7 @@ footer li:hover, nav li:hover, #nav-sm li:hover{
         width: 50%;
     }
     .articles>div{
-        width: 90%;
+        width: 100%;
     }
 
     .projects>div{
@@ -501,20 +502,21 @@ footer li:hover, nav li:hover, #nav-sm li:hover{
     }
 
     #img-div{
-        height: 280px;
+        height: 250px;
     }
 
     #hamberger{
         display: block;
     }
 
-    #nav-lg{
-        display: none;
-    }
-
     .container h2{
         margin: 4px 0;
         letter-spacing: 1px;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: flex-start;
     }
     
     
@@ -528,8 +530,5 @@ footer li:hover, nav li:hover, #nav-sm li:hover{
         width: 80%;
     }
 }
-
-
-
 
 
